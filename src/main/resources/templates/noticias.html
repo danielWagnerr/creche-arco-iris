@@ -6,6 +6,7 @@
 
   <!-- Bootstrap core CSS -->
   <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
   <!-- Custom fonts for this template -->
   <link
@@ -15,41 +16,39 @@
   <link rel="shortcut icon" href="/img/icone.png" type="image/x-icon" />
 
   <!-- Custom styles for this template -->
-  <link href="/css/business-casual.min.css" rel="stylesheet">
+  <link href="/css/business-casual-noticias.min.css" rel="stylesheet">
 </head>
 
 <body>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" type="button"
-        data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-        aria-label="Toggle navigation">Mais</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" th:href="@{/}">Início</a>
-          </li>
-        </ul>
-      </div>
+  <div class="container">
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" type="button" data-toggle="collapse" 
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Mais</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" th:href="@{/}">Início</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <br>
 
   <h1 class="site-heading text-center text-white">
     <span class="site-heading-upper text-primary mb-3">Creche Madre Mazzarello</span>
-    <span class="site-heading-lower">Noticias</span>
+    <span class="site-heading-lower">Notícias e Oportunidades</span>
   </h1>
 
   <div class="mx-auto text-center" sec:authorize="isAuthenticated()">
     <h1 class="site-heading text-center text-white">
-      <a class="btn btn-primary js-scroll-trigger" th:href="@{/add}">Adicionar nova noticia</a>
+      <a class="btn btn-primary js-scroll-trigger" th:href="@{/add}">Adicionar nova notícia</a>
     </h1>
   </div>
   <div>
@@ -62,7 +61,7 @@
               <div class="bg-faded rounded p-5">
                 <h2 class="section-heading mb-4">
                   <span class="section-heading-upper"></span>
-                  <b><span class="section-heading-lower" th:text="${feed.titulo}"></span></b>
+                  <b><span class="section-heading-lower2" th:text="${feed.titulo}"></span></b>
                 </h2>
                 <p th:text="${feed.texto}"></p>
                 <div class="mx-auto text-center" sec:authorize="isAuthenticated()">
@@ -129,5 +128,7 @@
     background-color: antiquewhite;
   }
 </style>
+<script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </html>
