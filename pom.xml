@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.tis</groupId>
-	<artifactId>creche-mazzarello</artifactId>
+	<artifactId>creche-arcoiris</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>creche-mazzarello</name>
-	<description>Web app for creche Mazzarello</description>
+	<name>creche-arcoiris</name>
+	<description>Web app for creche Arco Iris</description>
 
 	<properties>
 		<java.version>1.8</java.version>
