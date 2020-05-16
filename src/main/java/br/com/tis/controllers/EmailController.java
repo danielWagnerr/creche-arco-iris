@@ -29,8 +29,8 @@ public class EmailController {
 		SimpleMailMessage message = new SimpleMailMessage();
 		message.setSubject(nome + " - " + assunto);
 		message.setText(mensagem + "\n" + "\n" + "Contato: " + contato);
-        message.setTo("contatossitemazzarello@gmail.com");
-        message.setFrom("contatossitemazzarello@gmail.com");
+        message.setTo("contatocrechearcoiris@gmail.com");
+        message.setFrom("contatocrechearcoiris@gmail.com");
         
         try {
             mailSender.send(message);

@@ -13,7 +13,7 @@ import br.com.tis.domain.Atividade;
 import br.com.tis.repositories.CrecheRepository;
 
 @SpringBootApplication
-public class CrecheMazzarelloApplication implements CommandLineRunner {
+public class CrecheArcoIrisApplication implements CommandLineRunner {
 
 	@Autowired
 	private CrecheRepository crecheRepository;
@@ -21,7 +21,7 @@ public class CrecheMazzarelloApplication implements CommandLineRunner {
 	private Endereco endereco;
 	
 	public static void main(String[] args) {
-		SpringApplication.run(CrecheMazzarelloApplication.class, args);
+		SpringApplication.run(CrecheArcoIrisApplication.class, args);
 	}
 
 	public void run(String... args) throws Exception {
