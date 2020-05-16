@@ -40,24 +40,24 @@ public class FeedController{
 		return mv;
 	}
 
-//	@GetMapping("/delete/{id}")
-//	public RedirectView delete(@PathVariable("id") Long id) {
-//		RedirectView redirectView = new RedirectView();
-//		redirectView.setUrl("localhost:8080/noticias");
-//		service.delete(id);
-//
-//		return redirectView;
-//	}
+	@GetMapping("/delete/{id}")
+	public RedirectView delete(@PathVariable("id") Long id) {
+		service.delete(id);
+		RedirectView redirectView = new RedirectView();
+		redirectView.setUrl("/noticias");
+
+		return redirectView;
+	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public ModelAndView save(@Valid Feed feed, BindingResult result) {
+	public String save(@Valid Feed feed, BindingResult result) {
 		ModelAndView mv = new ModelAndView("/feedAdd");
 		mv.addObject("feed", feed);
 
 		if (result.hasErrors()) {
-			return mv;
+			return "redirect:noticias";
 		}
 		service.save(feed);
-		return mv;
+		return "redirect:noticias";
 	}
 }
