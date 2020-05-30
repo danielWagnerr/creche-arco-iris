@@ -32,12 +32,36 @@ public class UserService {
         return userRepository.findByEmail(email);
     }
 
-    public void saveUser(User user) {
+    public void updateUser(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         user.setActive(1);
         Role userRole = roleRepository.findByRole("ADMIN");
         user.setRoles(new HashSet<Role>(Arrays.asList(userRole)));
         userRepository.save(user);
     }
+      public void setUser(User user) {
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        user.setActive(1);
+        Role userRole = roleRepository.findByRole("ADMIN");
+        user.setRoles(new HashSet<Role>(Arrays.asList(userRole)));
+        userRepository.save(user);
+    }
+
+   public User getUser(User user) {
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        user.setActive(1);
+        Role userRole = roleRepository.findByRole("ADMIN");
+        user.setRoles(new HashSet<Role>(Arrays.asList(userRole)));
+        userRepository.save(user);
+    }
+
+   public User getAllUsers(User user) {
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        user.setActive(1);
+        Role userRole = roleRepository.findByRole("ADMIN");
+        user.setRoles(new HashSet<Role>(Arrays.asList(userRole)));
+        userRepository.save(user);
+    }
+
 
 }
